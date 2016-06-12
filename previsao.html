@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-controller="MainController">
+    <!--VENDORS-->
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/jquery-2.2.3.min.js"></script>
+
+    <!--JS-->
+    <script src="js/main.js"></script>
+
+    <!--ANGULAR-->
+    <script src="js/app.js"></script>
+    <script src="js/Controllers/mainController.js"></script>
+    <script src="js/Services/previsao.js"></script>
+    <script src="js/Controllers/listaCidades.js"></script>
+  
+   
+    <div class="escolheCidade" ng-controller="listaCidades">
+        <h1>Previsão em {{ dadosCidade.city.name }}, {{ dadosCidade.city.country }}</h1>
+        <label for="cidade">Mudar cidade</label>
+        <select name="cidade" id="listaCidades" ng-model="dado.opcaoSelecionada" onchange="pegarCidade()">
+            <option ng-repeat="opcao in dado.cidades" value="{{opcao.id}}" >{{opcao.nome}}, {{opcao.pais}} </option>
+        </select>
+        <button ng-click="pegarPrevisao()">pegar previsao</button>
+        <h3>Opção selecionada: {{dado.opcaoSelecionada}} </h3>
+    </div>
+<div class="wrapper">
+    <div class="cardPrevisao" ng-repeat="dia in dadosCidade.list">
+        <h4>{{ consertarData(dia.dt) | date:'EEEE, dd/MM @ HH:mm' }} </h4>
+        <p>Temperatura: {{ (dia.main.temp-273).toFixed(1) }}&deg; {{ temp.unit }}</p>
+        <p>Max: {{ (dia.main.temp_max-273).toFixed(1) }}&deg;C {{ dia.unit }} </p>
+        <p>Min: {{ (dia.main.temp_min-273).toFixed(1) }}&deg;C {{ dia.unit }}</p>
+        <p>Umidade: {{ dia.main.humidity }}% </p>
+        <p>Clima: {{ dia.weather[0].description }} </p>
+        <img src="http://openweathermap.org/img/w/{{ dia.weather[0].icon }}.png" alt="">
+    </div>
+</div>
+    
+
+</body>
+
+</html>

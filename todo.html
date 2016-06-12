@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO List</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    
+    <div class="todo-container" ng-controller="todoController">
+       <h1>Coisas para fazer</h1>
+        <h2>Faltam {{ restantes() }} coisas para fazer de um total de {{ coisas.length }}</h2>
+        <form action="#" ng-submit="add()">
+            <input type="text" ng-model="novaCoisa" placeholder="Nova tarefa...">
+            <input type="submit" value="OK">
+        </form>
+        <ul>
+            <li ng-repeat="item in coisas">
+                <input type="checkbox" ng-model="item.feito">
+                <span class="item-{{item.feito}}"> {{ item.nome }} <em ng-click="delete(item)">X</em></span>
+            </li>
+        </ul>
+    </div>
+    
+    <!--VENDORS-->
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/jquery-2.2.3.min.js"></script>
+
+    <!--JS-->
+    <script src="js/main.js"></script>
+
+    <!--ANGULAR-->
+    <script src="js/app.js"></script>
+    <script src="js/Controllers/todoController.js"></script>
+</body>
+</html>

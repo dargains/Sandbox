@@ -1,0 +1,72 @@
+.item-true {
+    text-decoration: line-through;
+}
+
+.todo-container {
+    margin: 20px;
+    input[type="text"] {
+        height: 31px;
+        width: 300px;
+        padding: 0 5px;
+        color: #333;
+        @include laptop {
+            width: 70%;
+            font-size: 2em;
+        }
+    }
+    
+    input[type="submit"] {
+        margin-left: 10px;
+        width: 70px;
+        height: 35px;
+        border: 1px solid #cecece;
+        background-color: #fff;
+        color: #666;
+        font-weight: bold;
+        font-size: 16px;
+        @include laptop {
+            width: 20%;
+            font-size: 2em;
+            
+        }
+    }
+    ul {
+        width: 400px;
+        margin: 20px 0;
+        background-color: #f5f5f5;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+        @include laptop {
+            width: 95%;
+            font-size: 2em;
+        }
+        li {
+            border-bottom: 1px solid #cecece;
+            color: #333;
+            
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+            span {
+                line-height: 40px;
+                @include laptop {
+                    line-height: 80px;
+                }
+            }
+            em {
+                display: block;
+                text-align: center;
+                width: 20px;
+                line-height: 20px;
+                content: "X";
+                float: right;
+                margin-right: 10px;
+                margin-top: 10px;
+                background-color: red;
+                border-radius: 50%;
+                color: #fff;
+                cursor: pointer;
+                font-style: normal;
+            }
+        }
+    }
+}

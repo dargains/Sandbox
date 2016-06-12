@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+   <meta charset="UTF-8">
+    <title>SandBox</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+
+
+
+</head>
+
+<body>
+    <!--carrega o header-->
+    <header></header>
+    <!--carrega o header-->
+
+
+    <div id="fullpage" ng-controller="MainController">
+        <div class="section sec1">
+            <h1>Section 1</h1>
+            <div>
+                <p>Name:
+                    <input type="text" ng-model="name">
+                </p>
+                <p>Olá, <span ng-bind="name"></span> </p>
+            </div>
+        </div>
+        <div class="section sec2">
+            <div class="slide" ng-repeat="pessoas in pessoas">
+                <app-info info="pessoas"></app-info>
+                <p ng-click="like($index)" class="btn btn_blue">+</p>
+                <p ng-click="dislike($index)" class="btn btn_red">-</p>
+            </div>
+        </div>
+        <div class="section sec3">
+            <h1>Score</h1>
+            <h2 ng-repeat="item in pessoas">
+                {{item.nome}} {{item.sobrenome}}: {{item.likes}}
+            </h2>
+        </div>
+        
+        <div class="section sec4">
+          <h1>Outras cenas</h1>
+           <ul>
+               <li><a href="previsao.html">Previsão do tempo</a></li>
+               <li><a href="todo.html">Lista de coisas para fazer</a></li>
+           </ul>
+            
+            
+        </div>
+        
+    </div>
+
+    <!--carrega o footer-->
+    <footer></footer>
+    <!--carrega o footer-->
+
+    <!------------------------->
+    <!----*****IMPORTS*****---->
+    <!------------------------->
+    <!--VENDORS-->
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/jquery.easings.min.js"></script>
+
+    <!--JS-->
+    <script src="js/main.js"></script>
+
+    <!--ANGULAR-->
+    <script src="js/app.js"></script>
+    <script src="js/Controllers/mainController.js"></script>
+    <script src="js/Directives/appInfo.js"></script>
+    <script src="js/Services/previsao.js"></script>
+
+</body>
+
+</html>

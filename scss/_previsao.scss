@@ -1,0 +1,104 @@
+.escolheCidade {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.wrapper {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media only screen and (max-width: 1060px) {
+        width: 90%;
+        font-size: 2em;
+    }
+}
+
+.cardPrevisao {
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 100px;
+    position: relative;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+    h4 {
+        display: block;
+        text-align: center;
+        background-color: dodgerblue;
+        color: azure;
+        line-height: 40px;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        margin-top: 0;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 5px 5px 0 0;
+    }
+    p {
+        z-index: 10;
+        color: #333;
+    }
+    &:first-child {
+        width: 95%;
+        margin: 20px 0;
+        font-size: 1.5em;
+    }
+    &:nth-child(4n +5) {
+        margin-right: 0;
+    }
+    &:nth-child(4n +2) {
+        margin-left: 0;
+    }
+    @media only screen and (max-width: 1060px) {
+        width: 90%;
+        padding-top: 120px;
+        font-size: 1.3em;
+        h4 {
+            line-height: 80px;
+        }
+        &:first-child {
+            width: 90%;
+            margin: 20px;
+            font-size: 1.3em;
+        }
+        &:nth-child(4n +5) {
+            margin-right: 20px;
+        }
+        &:nth-child(4n +2) {
+            margin-left: 20px;
+        }
+        img {
+            position: absolute;
+            width: 50%;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+}
+
+label,
+h3 {
+    margin: 10px 0;
+    display: block;
+    font-size: 2em;
+}
+
+select {
+    width: 50%;
+    font-size: 2em;
+    padding: 10px;
+    background-color: #fff;
+    background-image: url(../img/arrow-down.PNG);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    -webkit-appearance: none;
+}

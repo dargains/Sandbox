@@ -1,0 +1,14 @@
+footer ul {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #cecece;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    line-height: 60px;
+    li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+}

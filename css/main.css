@@ -1,0 +1,269 @@
+header {
+  width: 100%;
+  background-color: #cecece;
+  position: fixed;
+  z-index: 10; }
+  header nav {
+    width: 1180px;
+    margin: 0 auto;
+    overflow: hidden; }
+    header nav * {
+      float: left;
+      line-height: 60px; }
+    header nav img {
+      margin-top: 5px;
+      margin-right: 30px; }
+    header nav ul li {
+      margin-right: 20px; }
+      header nav ul li a {
+        text-decoration: none;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: #333;
+        font-weight: bold; }
+
+footer ul {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #cecece;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  line-height: 60px; }
+  footer ul li {
+    display: inline-block;
+    padding: 0 10px; }
+
+.escolheCidade {
+  background-color: aliceblue;
+  text-align: center;
+  padding: 50px 0; }
+
+.wrapper {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  @media only screen and (max-width: 1060px) {
+    .wrapper {
+      width: 90%;
+      font-size: 2em; } }
+
+.cardPrevisao {
+  width: 200px;
+  margin: 20px;
+  padding: 20px;
+  padding-top: 100px;
+  position: relative;
+  background-color: #eee;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+  .cardPrevisao h4 {
+    display: block;
+    text-align: center;
+    background-color: dodgerblue;
+    color: azure;
+    line-height: 40px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    margin-top: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0; }
+  .cardPrevisao p {
+    z-index: 10;
+    color: #333; }
+  .cardPrevisao:first-child {
+    width: 95%;
+    margin: 20px 0;
+    font-size: 1.5em; }
+  .cardPrevisao:nth-child(4n +5) {
+    margin-right: 0; }
+  .cardPrevisao:nth-child(4n +2) {
+    margin-left: 0; }
+  @media only screen and (max-width: 1060px) {
+    .cardPrevisao {
+      width: 90%;
+      padding-top: 120px;
+      font-size: 1.3em; }
+      .cardPrevisao h4 {
+        line-height: 80px; }
+      .cardPrevisao:first-child {
+        width: 90%;
+        margin: 20px;
+        font-size: 1.3em; }
+      .cardPrevisao:nth-child(4n +5) {
+        margin-right: 20px; }
+      .cardPrevisao:nth-child(4n +2) {
+        margin-left: 20px; }
+      .cardPrevisao img {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        bottom: 0;
+        z-index: 1; } }
+
+label,
+h3 {
+  margin: 10px 0;
+  display: block;
+  font-size: 2em; }
+
+select {
+  width: 50%;
+  font-size: 2em;
+  padding: 10px;
+  background-color: #fff;
+  background-image: url(../img/arrow-down.PNG);
+  background-repeat: no-repeat;
+  background-position: 95%;
+  -webkit-appearance: none; }
+
+.item-true {
+  text-decoration: line-through; }
+
+.todo-container {
+  margin: 20px; }
+  .todo-container input[type="text"] {
+    height: 31px;
+    width: 300px;
+    padding: 0 5px;
+    color: #333; }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .todo-container input[type="text"] {
+        width: 70%;
+        font-size: 2em; } }
+  .todo-container input[type="submit"] {
+    margin-left: 10px;
+    width: 70px;
+    height: 35px;
+    border: 1px solid #cecece;
+    background-color: #fff;
+    color: #666;
+    font-weight: bold;
+    font-size: 16px; }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .todo-container input[type="submit"] {
+        width: 20%;
+        font-size: 2em; } }
+  .todo-container ul {
+    width: 400px;
+    margin: 20px 0;
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .todo-container ul {
+        width: 95%;
+        font-size: 2em; } }
+    .todo-container ul li {
+      border-bottom: 1px solid #cecece;
+      color: #333; }
+      .todo-container ul li input[type="checkbox"] {
+        margin-right: 10px; }
+      .todo-container ul li span {
+        line-height: 40px; }
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .todo-container ul li span {
+            line-height: 80px; } }
+      .todo-container ul li em {
+        display: block;
+        text-align: center;
+        width: 20px;
+        line-height: 20px;
+        content: "X";
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+        background-color: red;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        font-style: normal; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+#fullpage {
+  z-index: 1; }
+  #fullpage .section {
+    text-align: center;
+    font-family: sans-serif; }
+    #fullpage .section .slide h1 {
+      font-size: 4em; }
+    #fullpage .section .slide p {
+      font-size: 2em; }
+  #fullpage .sec1 {
+    background: linear-gradient(#333, #666);
+    color: #fff; }
+  #fullpage .sec2 {
+    background: linear-gradient(#666, #999);
+    color: #ccc; }
+  #fullpage .sec3 {
+    background: linear-gradient(#999, #ccc);
+    color: #666; }
+  #fullpage .sec4 {
+    background: linear-gradient(#ccc, #fff);
+    color: #333; }
+
+.btn {
+  text-align: center;
+  display: block;
+  width: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 10px auto;
+  border-radius: 50%;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3); }
+
+.btn_blue {
+  background-color: dodgerblue; }
+
+.btn_red {
+  background-color: coral; }
+
+.imagens {
+  text-align: center;
+  width: 900px;
+  margin: 0 auto;
+  position: relative; }
+  .imagens img {
+    width: 800px;
+    height: 600px;
+    display: none;
+    margin: 0 auto; }
+    .imagens img:first-of-type {
+      display: block; }
+  .imagens ul {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); }
+  .imagens .slide {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    background-color: red; }
+    .imagens .slide:hover {
+      background-color: blue; }
+    .imagens .slide .selected {
+      background-color: blue; }
+
+/*# sourceMappingURL=main.css.map */
